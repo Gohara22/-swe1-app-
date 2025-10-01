@@ -1,0 +1,17 @@
+# Virtual environments
+.eb-virt
+.venv
+env/
+venv/
+eb-virt/
+
+# Environment variables
+.env
+
+# Other common ignores
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.DS_Store
+
