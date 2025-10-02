@@ -6,6 +6,7 @@ venv/
 eb-virt/
 myenv/
 ebdjango/
+testenv/
 
 # Environment variables
 .env
