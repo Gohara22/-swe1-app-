@@ -31,22 +31,33 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
+    - name: Display Python and package versions
+      run: |
+        python --version
+        pip list
+        
     - name: Check code formatting with black
       run: |
-        black --check .
+        echo "Checking code formatting with black..."
+        python -m black --check . --diff --color
         
     - name: Lint with flake8
       run: |
-        flake8 .
+        echo "Running flake8 linter..."
+        python -m flake8 . --show-source --statistics
         
     - name: Run Django system checks
       run: |
+        echo "Running Django system checks..."
         python manage.py check
         
     - name: Run tests with coverage
       run: |
-        coverage run --source='.' manage.py test
-        coverage xml
+        echo "Running tests with coverage..."
+        python -m coverage run --source='.' manage.py test --verbosity=2
+        python -m coverage xml
+        echo "Coverage report:"
+        python -m coverage report
         
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v2
