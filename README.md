@@ -2,6 +2,8 @@
 
 A Django web application for creating and voting on polls, with continuous integration and deployment.
 
+<!-- CI/CD Status: Active -->
+
 ![Build Status](https://github.com/Gohara22/-swe1-app-/workflows/Django%20CI%2FCD/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/Gohara22/-swe1-app-/badge.svg?branch=main)](https://coveralls.io/github/Gohara22/-swe1-app-?branch=main)
 
